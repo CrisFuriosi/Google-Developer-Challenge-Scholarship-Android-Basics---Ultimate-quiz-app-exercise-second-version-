@@ -2,6 +2,7 @@ package com.example.android.milanii;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -57,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
         ScoreIncrementIfBooleanIsTrue(quiz1AnswerC.isChecked());
 
         // Check Quiz 2 and assign score
-        String guessAnswer2 = (quiz2Answer).getText().toString();
-        if (guessAnswer2.equalsIgnoreCase("Leonardo") || guessAnswer2.equalsIgnoreCase("Leonardo Da Vinci")) {
+        String guessAnswer2 = (quiz2Answer).getText().toString().replace(" ", "");
+        if (guessAnswer2.equalsIgnoreCase("Leonardo") || guessAnswer2.equalsIgnoreCase("LeonardoDaVinci")) {
             score++;
         }
 
